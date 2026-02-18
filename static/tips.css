@@ -1,0 +1,128 @@
+/* =======================
+   Gameplay Tips Page Styles
+   ======================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2b2b3b;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Layout */
+.container {
+    width: 85%;
+    margin: 40px auto;
+    padding: 25px;
+    background: linear-gradient(145deg, #23233a, #1a1a2d);
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 255, 136, 0.18);
+}
+
+/* =======================
+   Header Styling
+   ======================= */
+.main-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.main-header h1 {
+    font-size: 2.4em;
+    color: #00ff88;
+    margin-bottom: 10px;
+    letter-spacing: 0.8px;
+}
+
+.main-header p {
+    font-size: 1.1em;
+    color: #cccccc;
+}
+
+/* =======================
+   Tips Grid Layout
+   ======================= */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+/* Individual Tip Card */
+.tip-card {
+    background-color: #1e1e2f;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 255, 136, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 255, 136, 0.45);
+}
+
+.tip-card h3 {
+    color: #00ff88;
+    margin-bottom: 8px;
+    font-size: 1.2em;
+}
+
+.tip-card p {
+    color: #e0e0e0;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* =======================
+   Navigation Buttons
+   ======================= */
+.nav-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    color: #ffffff;
+    background-color: #00c76a;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 255, 150, 0.2);
+}
+
+.nav-btn:hover {
+    background-color: #00ff88;
+    color: #1e1e2f;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+/* =======================
+   Footer Styling
+   ======================= */
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #aaaaaa;
+    padding: 10px 0;
+    border-top: 1px solid #333;
+}
+
+/* Decorative Bottom Padding */
+.bottom-space {
+    height: 30px;
+}

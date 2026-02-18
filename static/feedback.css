@@ -1,0 +1,41 @@
+/* Feedback section styling */
+
+textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: 1px solid #888;
+    resize: none;
+    background-color: #2b2b3d;
+    color: #fff;
+}
+
+.feedback-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.feedback-btn:hover {
+    background-color: #45a049;
+}
+
+
+.feedback-message {
+    background-color: #2a2a3b;
+    color: #00ff88;
+    border: 1px solid #00ff88;
+    width: 60%;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,255,136,0.2);
+}

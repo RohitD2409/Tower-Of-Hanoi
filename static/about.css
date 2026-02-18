@@ -1,0 +1,123 @@
+/* =======================
+   About Page Styles
+   ======================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e2f;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    width: 85%;
+    margin: 30px auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #1b1b2b, #24243a);
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 255, 150, 0.15);
+}
+
+/* Header styling */
+.main-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.main-header h1 {
+    font-size: 2.4em;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    color: #00ff88;
+}
+
+.main-header p {
+    font-size: 1.1em;
+    color: #cccccc;
+}
+
+/* Info Table */
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #2b2b3b;
+}
+
+.info-table th, .info-table td {
+    border: 1px solid #00ff88;
+    padding: 12px;
+    text-align: left;
+    font-size: 1em;
+}
+
+.info-table th {
+    background-color: #33334d;
+    color: #00ff88;
+    width: 30%;
+}
+
+.info-table td {
+    color: #e0e0e0;
+}
+
+/* Small decorative gap */
+.table-spacer {
+    height: 20px;
+}
+
+/* =======================
+   Navigation Buttons
+   ======================= */
+
+.nav-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    color: #ffffff;
+    background-color: #00c76a;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 255, 150, 0.2);
+}
+
+/* Hover Effect */
+.nav-btn:hover {
+    background-color: #00ff88;
+    color: #1e1e2f;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #aaa;
+    padding: 10px 0;
+    border-top: 1px solid #333;
+    letter-spacing: 0.5px;
+}
+
+/* Bottom padding for visual balance */
+.bottom-space {
+    height: 30px;
+}
