@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Stats</title>
+    <link rel="stylesheet" href="static/stats.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- ======================= -->
+        <!-- Main Header -->
+        <!-- ======================= -->
+        <header class="main-header">
+            <h1>🏆 Game Stats</h1>
+            <p>Review your performance after the game!</p>
+        </header>
+
+        <!-- ======================= -->
+        <!-- Stats Table Section -->
+        <!-- ======================= -->
+        <section class="stats-section">
+            <table class="stats-table">
+                <tr><th>Player Name</th><td>{{ username if username else "N/A" }}</td></tr>
+                <tr><th>Disks Used</th><td>{{ disks if disks else "N/A" }}</td></tr>
+                <tr><th>Total Moves</th><td>{{ moves if moves else "N/A" }}</td></tr>
+                <tr><th>Feedback Given</th><td>{{ feedback if feedback else "No" }}</td></tr>
+            </table>
+
+            <!-- informational note -->
+            <div class="note-box">
+                {% if username %}
+                    <p>Stats for <strong>{{ username }}</strong> are updated after this game completion.</p>
+                {% else %}
+                    <p>Note: Stats are updated after each game completion.</p>
+                {% endif %}
+            </div>
+        </section>
+
+        <!-- ======================= -->
+        <!-- Navigation Buttons -->
+        <!-- ======================= -->
+        <section class="nav-section">
+            <div class="button-group">
+                <a href="{{ url_for('index') }}" class="nav-btn">🏠 Home</a>
+                <a href="{{ url_for('about_page') }}" class="nav-btn">ℹ️ About</a>
+                <a href="{{ url_for('tips_page') }}" class="nav-btn">💡 Gameplay Tips</a>
+            </div>
+        </section>
+
+        <!-- ======================= -->
+        <!-- Footer -->
+        <!-- ======================= -->
+        <footer class="footer">
+            <p>© 2025 Rohit D | Learning Project</p>
+        </footer>
+    </div>
+
+</body>
+</html>

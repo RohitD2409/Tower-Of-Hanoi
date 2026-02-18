@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Tower of Hanoi</title>
+    <link rel="stylesheet" href="static/feedback.css">
+</head>
+<body>
+    
+    <h1>Tower of Hanoi - Feedback</h1>
+    <p>We would love to hear your thoughts about the game!</p>
+
+    <form method="POST" action="/feedback">
+        <label for="feedback_text">Enter your feedback:</label><br>
+        <textarea id="feedback_text" name="feedback_text" rows="6" placeholder="Type your feedback here..." required></textarea><br>
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+    {% if message %}
+        <div class="message">{{ message }}</div>
+    {% endif %}
+
+    <hr>
+    <p>Thank you for helping us improve the game!</p>
+    <p>Back to <a href="/">Home</a></p>
+
+</body>
+</html>

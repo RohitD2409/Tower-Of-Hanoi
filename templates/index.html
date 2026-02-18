@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower of Hanoi</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="main-header">
+            <h1 class="title">🎮 Tower of Hanoi 🎮</h1>
+            <p class="subtitle">A Classic Puzzle of Logic and Patience</p>
+        </header>
+
+        <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <a href="{{ url_for('about_page') }}" class="action-btn">About</a>
+        <a href="{{ url_for('tips_page') }}" class="action-btn">Tips</a>
+        <a href="{{ url_for('stats_page') }}" class="action-btn">Stats</a>
+    </div>
+
+
+        <section class="form-section">
+            <div class="form-box">
+                <h2 class="form-title">Enter Player Details</h2>
+
+                <form action="{{ url_for('start_game') }}" method="post" class="player-form">
+                    <div class="input-group">
+                        <label for="playerName">Player Name:</label>
+                        <input type="text" id="playerName" name="playerName" placeholder="Enter your name" 
+                               value="{{ request.form.get('playerName', '') }}" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="disks">Select No. of Disks:</label>
+                        <select id="disks" name="disks" required>
+                            <option value="" disabled {% if not request.form.get('disks') %}selected{% endif %}>-- Choose Disks --</option>
+                            {% for i in range(3, 9) %}
+                            <option value="{{ i }}" {% if request.form.get('disks') == i|string %}selected{% endif %}>{{ i }} Disks</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="submit" class="start-btn">Start Game</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>Developed with ❤ for learning & fun</p>
+        </footer>
+    </div>
+
+    <section class="info-section">
+        <h2>About the Game</h2>
+        <p>The Tower of Hanoi is a mathematical puzzle where you have three rods and a number of disks.
+           The goal is to move all the disks from the first rod to the third rod following three simple rules:</p>
+        <ul>
+            <li>Only one disk can be moved at a time.</li>
+            <li>Each move consists of taking the upper disk from one stack and placing it on another rod.</li>
+            <li>No larger disk may be placed on top of a smaller disk.</li>
+        </ul>
+        <p>Test your logic, patience, and problem-solving skills. Each additional disk doubles the challenge!</p>
+    </section>
+
+    <section class="tips-section">
+        <h2>Remember...</h2>
+        <div class="tips-grid">
+            <div class="tip-card">
+                <h3>🎯 Focus</h3>
+                <p>Keep track of your moves — fewer moves means smarter play!</p>
+            </div>
+            <div class="tip-card">
+                <h3>🧠 Plan Ahead</h3>
+                <p>Try visualizing the smaller stacks before moving larger ones.</p>
+            </div>
+            <div class="tip-card">
+                <h3>⚡ Speed</h3>
+                <p>Challenge yourself by solving faster each time you play.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="acknowledgement">
+        <h2>Acknowledgement</h2>
+        <p>This project was created as part of a learning journey to understand algorithmic logic,
+           recursion, and backend integration with Python,Flask & Firebase.</p>
+    </section>
+
+    <section class="contact">
+        <h2>Contact</h2>
+        <p>Have feedback or suggestions? Feel free to reach out via email at
+           <a href="mailto:example@gmail.com">rohitdabekar321@gmail.com</a></p>
+    </section>
+
+    <div class="end-section">
+        <p>Thank you for playing Tower of Hanoi! 🎮</p>
+    </div>
+
+</body>
+</html>
