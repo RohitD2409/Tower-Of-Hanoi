@@ -5,8 +5,8 @@ A professional implementation of the classic Tower of Hanoi puzzle using a moder
 ## 🚀 How to Run the Game
 Open your terminal in the project folder and run these 3 commands:
 
-   pip install flask pygame pyttsx3 firebase-admin
-   dir
+   pip install flask pygame pyttsx3 firebase-admin &
+   dir &
    python app.py
 
    Once running, open http://127.0.0.1:5000 in your browser.
